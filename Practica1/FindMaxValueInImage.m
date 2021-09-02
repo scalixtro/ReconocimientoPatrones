@@ -13,7 +13,7 @@ function [column] = FindmaxRow(image)
        contador = 0;
        for j=1:n
            %Variable with value for Row
-           valRow=image(i,j);
+           valRow = image(i,j);
            %If value is 1 add to counter one byte
            if valRow == 1
                contador = contador + 1;
@@ -23,10 +23,9 @@ function [column] = FindmaxRow(image)
        isMaxRow = contador;
        %Check if isMaxRow is greater than maxRow if it is update column 
        if isMaxRow >= maxRow
+            maxRow = isMaxRow;
             column = maxRow;
        end
-       %Variable with value for Column
-       valRow=image(i,j);
     end
 end
 

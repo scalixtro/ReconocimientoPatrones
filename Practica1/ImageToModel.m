@@ -29,7 +29,7 @@ function [] = ImageToModel()
             currentimage_Gray = binarize(currentimage, 'black');
         end
         
-        disp(FindMaxColumn(currentimage_Gray));
+        disp(FindMaxValueInImage(currentimage_Gray));
 
         %Show images
         subplot(2,4,1);
