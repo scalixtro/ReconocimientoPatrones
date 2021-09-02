@@ -1,5 +1,5 @@
 function [cociente] = ratio(img)
-rec = imcrop(imread(img));
+rec = imcrop(img);
 imshow(rec)
 
 % Componentes
