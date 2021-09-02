@@ -1,27 +1,36 @@
 function [] = ImageToModel()
-    %UNTITLED Summary of this function goes here
-    %   Detailed explanation goes here
+    
     path_directory = 'Images\'; 
-    Files=dir([path_directory '*.jpg']);
+    %Create path directory with files to search
+    Files=dir([path_directory '\*.jpg']);
 
     for k=1:length(Files)
+        
+        %Maximize window figures
         figure('units','normalized','outerposition',[0 0 1 1])
-
+        
+        %Concat directory and files
         currentfilename = strcat(path_directory,Files(k).name);
+        %Display name of interactive file
         disp(Files(k).name)
         
+        %Read file
         currentimage = imread(currentfilename);
         
+        %Convert RGB images
         R = currentimage(:, :, 1); 
         G = currentimage(:, :, 2); 
         B = currentimage(:, :, 3);
         
+       %Apply one filter or other according to name file
         if (contains(Files(k).name, 'Manzana'))
             currentimage_Gray = binarize(currentimage, 'white');  
+            
         else
             currentimage_Gray = binarize(currentimage, 'black');
         end
         
+        %Show images
         subplot(2,4,1);
         imshow(currentimage); title('Original Image');
         subplot(2,4,2);
