@@ -1,10 +1,11 @@
 function [cociente] = ratio(img)
-imshow(img)
+rec = imcrop(imread(img));
+imshow(rec)
 
 % Componentes
-img_r = img(:,:,1);
-img_g = img(:,:,2);
-img_b = img(:,:,3);
+img_r = rec(:,:,1);
+img_g = rec(:,:,2);
+img_b = rec(:,:,3);
 
 % Imagenes
 % figure(1)
