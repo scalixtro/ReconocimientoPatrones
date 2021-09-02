@@ -25,20 +25,21 @@ function [] = ImageToModel()
        %Apply one filter or other according to name file
         if (contains(Files(k).name, 'Manzana'))
             currentimage_Gray = binarize(currentimage, 'white');  
-            
         else
             currentimage_Gray = binarize(currentimage, 'black');
         end
         
+        disp(FindMaxColumn(currentimage_Gray));
+
         %Show images
         subplot(2,4,1);
         imshow(currentimage); title('Original Image');
         subplot(2,4,2);
-        imshow(R); title('Red Slayer');
+        imshow(R); title('Red Layer');
         subplot(2,4,3);
-        imshow(G); title('GreenS Slayer');
+        imshow(G); title('Green Layer');
         subplot(2,4,4);
-        imshow(B); title('Blue Slayer');
+        imshow(B); title('Blue Layer');
         subplot(2,4,5);
         imshow(currentimage_Gray); title('Model');
         
