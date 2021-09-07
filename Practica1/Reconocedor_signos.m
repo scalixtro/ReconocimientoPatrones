@@ -1,8 +1,8 @@
 clear all, close all, clc
 
 % Lectura y binarizacion de la imagen
-img = imread('./binarios/N3.jpg');
-img_bin = binarize(img, 'black');
+img = imread('./binarios/Manzana6.jpg');
+img_bin = binarize(img, 'white');
 
 % Obtencion de caracteristicas
 img_color = color(img);
