@@ -23,4 +23,5 @@ function [img_binary] = binarize(img, background)
     img_binary = bwareaopen(img_binary, 5000);
     img_binary = imdilate(img_binary, se);
     img_binary = imfill(img_binary, 'holes');
+
 end
