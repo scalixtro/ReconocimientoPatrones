@@ -1,10 +1,10 @@
 clear all, close all, clc
 
 % Lectura y binarizacion de la imagen
-img = imread('./binarios/manzana6.jpg');
+img = imread('./binarios/manzana7.jpg');
 img_rec = imcrop(img);
-show_rgb(img_rec);
-show_rgb_gray(img_rec);
+show_rgb(img);
+show_rgb_gray(img);
 show_histogram(img_rec);
 img_bin = binarize(img,'white');
 
