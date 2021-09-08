@@ -12,7 +12,7 @@ img_color = color(img);
 img_forma = forma(img_bin);
 v = [img_color img_forma]';
 
-% Grafica los datos de las caracterÌsticas de color y forma de la manzana y naranja
+% Grafica los datos de las caracter√≠sticas de color y forma de la manzana y naranja
 
 % Datos de las manzanas rojas
 x1 = [0.5417 0.4500 0.5139 0.3625 0.3867]; % Color
@@ -23,7 +23,7 @@ x2 = [0.8696 0.8333 0.8672 0.8904 0.8906]; % Color
 y2 = [0.5065 0.5237 0.4601 0.4235 0.5135]; % Forma
 
 
-% FunciÛn discriminante
+% Funci√≥n discriminante
 fd = img_forma + 1.013*img_color-1.136;
 
 if fd > 0 
@@ -40,8 +40,8 @@ y = -1.013*x+1.136;
 figure;
 plot(x1,y1,'r*',x2,y2,'bo',x,y,'g-',img_color,img_forma,'kx','LineWidth',2)
 
-% Elementos de la gr·fica 
-title('ClasificaciÛn de frutas')
+% Elementos de la gr√°fica 
+title('Clasificaci√≥n de frutas')
 xlabel('Color')
 ylabel('Forma')
 legend('Manzanas rojas','Naranjas', 'Recta fd')
