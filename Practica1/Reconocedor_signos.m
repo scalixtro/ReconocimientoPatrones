@@ -2,6 +2,9 @@ clear all, close all, clc
 
 % Lectura y binarizacion de la imagen
 img = imread('./binarios/Manzana6.jpg');
+show_rgb(img);
+show_rgb_gray(img);
+show_histogram(img);
 img_bin = binarize(img, 'white');
 
 % Obtencion de caracteristicas
@@ -34,7 +37,7 @@ x = 0.3:0.01:1;
 y = -1.013*x+1.136;
 
 % Grafica
-figure
+figure;
 plot(x1,y1,'r*',x2,y2,'bo',x,y,'g-',img_color,img_forma,'kx','LineWidth',2)
 
 % Elementos de la gráfica 

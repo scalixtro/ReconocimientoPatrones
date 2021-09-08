@@ -25,7 +25,7 @@ function [r_forma] = forma(img_bin)
     end
 
     altura_ancho = altura_ancho-dif;
-    r_forma = altura_fruta/altura_ancho;
+    r_forma = altura_ancho / altura_fruta;
 
 end
 
