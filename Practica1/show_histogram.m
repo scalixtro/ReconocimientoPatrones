@@ -8,6 +8,7 @@ function [] = show_histogram(img)
     max_g = max(imhist(g));
     max_b = max(imhist(b));
     
+    figure
     subplot(2,2,1);
     imhist(r);
     ylim([0 max_r]);
@@ -21,4 +22,3 @@ function [] = show_histogram(img)
     ylim([0 max_b]);
     title('Histograma de B');
 end
-

@@ -11,4 +11,3 @@ function [] = show_rgb_gray(img)
     imshow(img(:,:,3));
     title('Intensidades de azul');
 end
-

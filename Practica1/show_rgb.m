@@ -31,4 +31,3 @@ function [] = show_rgb(img)
     title('Imagen en azul');
     
 end
-
