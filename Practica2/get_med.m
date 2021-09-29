@@ -7,6 +7,7 @@ function [coef] = get_med(prototypes)
     % Calculates de constant for each class -0.5 * (a^2+b^2)
     constant = -0.5 * sum(prototypes.^2,2); 
     
+    counter = 1;
     n = size(prototypes,1);
     m = size(prototypes,2);
     coef = zeros(nchoosek(n,2), m + 1);
@@ -19,7 +20,8 @@ function [coef] = get_med(prototypes)
     % coeficientes de las funciones discriminantes.
     for i=1:n-1
         for j=i+1:n
-            coef(i+j-2,:) = prototypes(i,:) - prototypes(j,:);
+            coef(counter,:) = prototypes(i,:) - prototypes(j,:);
+            counter = counter + 1;
         end
     end
     
