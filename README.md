@@ -1,3 +1,6 @@
 # Reconocimiento de patrones 🗿
 
-Prácticas de Reconocimiento de Patrones
+* Calixtro Maldonado Said Josue
+* Lopez Lopez Alan Rodrigo
+* Salazar Daniel
+
